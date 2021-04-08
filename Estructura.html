@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<!-- Incorporamos los enlaces externos tanto de CSS, como la hoja externa de JavaScript como un enlace a 
+la librería de JQuery, ya que lo hemos utilizado en la parte de la galería de imágenes-->
+
+    <link rel="STYLESHEET" href="CSS.css">
+    <script language="Javascript" src="bienvenida.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    
+    <title>Actividad de aprendizaje 2º Evaluación</title>
+    <meta charset="UTF-8">
+
+
+</head>
+
+<body>
+
+<!--Lo primero que enontramos en la web es un menú desplegable, lo hemos creado a través de JavaScript. He seleccionado
+el menú desplegable de la página CODEPEN: https://codepen.io/LauraZG/pen/NgjmBP y lo he modificado.-->
+
+    <div class="dropdown">
+        <button onclick="myFunction()" class="drop-button">Sobre Creatips</button>
+       <div id="myDropdown" class="dropdown-content">
+         <a href="#">Sobre nosotros</a>
+         <a href="#">Nuestros cursos</a>
+         <a href="#">Nuestra filosofía</a>
+         <a href="#">Contacta con nosotros</a>
+       </div>
+     </div>
+
+<!--Creamos la sección de banner principal, esta sección no está modificada con respecto a la primera evaluación-->
+
+    <div class="textosheader">
+
+        <section class="texto-header1">
+            <h1>Escuela creativa</h1>
+            <section class="texto-header2">
+                <h2>Formación para entender la publicidad</h2>
+
+                <section class="imagen-logo">
+                    <img src="creatips.png" witdth="190" height="190">
+                </section>
+            </section>
+        </section>
+    </div>
+
+    <!-- A continuación vamos a crear un slider, con fondo blanco e imágenes transparentes -->
+
+
+    <div class="slider">
+        <ul>
+            <li>
+                <section class="textoslider">
+                    <h1>Conoce nuestra escuela</h1>
+                    <h2>Un espacio multidisciplinar</h2>
+                </section>
+                <img src="ordenador.png" alt="">
+            </li>
+            <li>
+                <section class="textoslider">
+                    <h1>Absorbente. Así es el mundo de la publicidad.</h1>
+                </section>
+                <img src="portatil-slider.png" alt="">
+            </li>
+            <li>
+                <section class="textoslider">
+                    <h1>Cursos adaptados a las necesidades de los alumnos</h1>
+                </section>
+                <img src="móvil-slider.png" alt="">
+            </li>
+        </ul>
+    </div>
+
+    <!--Para la sección de la galería, buscamos crear un efecto a través de JQuery que nos permita 
+    una vez haga clic en la imagen, poder agrandar las fotografías y poder cerrarlas. Estos recursos han sido 
+sacados de la página CODEPEN: https://codepen.io/JyGProyectosWeb/pen/OXjXkX -->
+   
+    <ul class="galeria">
+        <li class="galeria__item"><img src=1.jpg class="galeria__img"></li>
+        <li class="galeria__item"><img src=2.jpg class="galeria__img"></li>
+        <li class="galeria__item"><img src=3.jpg class="galeria__img"></li>
+        <li class="galeria__item"><img src=4.jpg class="galeria__img"></li>
+        <li class="galeria__item"><img src=5.jpg class="galeria__img"></li>
+        <li class="galeria__item"><img src=6.jpg class="galeria__img"></li>
+        <li class="galeria__item"><img src=7.jpg class="galeria__img"></li>
+        <li class="galeria__item"><img src=8.jpg class="galeria__img"></li>
+      </ul>
+      <br>
+
+      <!-- Para poder el formulario de registro, hemos utilizado JavaScript, la idea es que podamos verificar 
+    que los campos que está aportando el usuario están completados correctamente. El formulario base lo he cogido de la página CODEPEN: 
+en este enlace: https://codepen.io/IRISMA/pen/LaBLzJ -->
+
+<div class="container" style="max-width: 650px; min-width: 400px;">
+  <div class="card">
+    <h2 class="card-header text-center">formulario de Registro</h2>
+    <div class="card-body">
+      <form id="myForm" onsubmit="return validar()">
+        <div class="form-group">
+         
+          <label for="user">Nombre</label>
+          <input type="text" class="form-control" id="user" placeholder="Usuario">
+          <label for="email">Correo Electronico:</label>
+          <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+          <label for="codipos">Código Postal:</label>
+          <input type="text" class="form-control" id="codipos" placeholder="Codigo Postal">
+        </div>
+
+        <div class="form-group">
+          
+          <label for="sexo">Sexo:</label>
+          <input type="radio" id="sexo" name="sexo"> Masculino
+          <input type="radio" id="sexo" name="sexo"> Femenino <br>
+          <label for="ciudad">Ciudad:</label>      
+            <select class="form-control" id="ciudad">
+              <option value="Lota">Seleccionar</option>
+              <option value="Lota">Zaragoza</option>
+              <option value="Coronel">Huesca</option>
+              <option value="concepción">Teruel</option>
+            </select>      
+          <label for="terminos">Protección de datos</label><br>
+          <input type="checkbox" id="terminos"> Acepto los términos y condiciones          
+        </div>
+        <input type="submit" class="btn btn-success" id="boton" value="Registrar">
+        <input type="reset" class="btn btn-danger" id="boton" value="Reiniciar">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Otro de los requisitos que se solicitan dentro de la actividad de aprendizaje, es incorporar una sección con un mapa de Google
+para posicionar la empresa-->
+
+    <div class= "espaciomapa">
+        <div class="textomapa">
+    
+            <h1>¿Sabes dónde encontrarnos?</h1>
+            <br>
+            <h4>Ubicada en la antigua estación de Utrillas, nuestra sede o estación, cuenta con espacios diseñados para facilitar la innovación, el encuentro y la cooperación.</h4>
+
+        </div>
+        <div class="mapa">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.718891354101!2d-0.8698305490446884!3d41.64020727913984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914ff81bddc49%3A0x5018c70785e301f4!2sT-ZIR!5e0!3m2!1ses!2ses!4v1616142514997!5m2!1ses!2ses"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+        </div>
+    </div>
+
+    <!--Por último, encontramos el footer con la información básica de la empresa-->
+
+    <div class ="contenedorfooter">
+        <div class="item1">
+            <span></span>
+            <span></span>
+            <span></span>
+        
+        <li>creatips</li>
+        <li>sobre nosotros</li>
+        <li>Nuestros cursos</li>
+        <li>Noticias</li>
+        <li>Sobre el sitio web</li>
+        </div>
+
+
+        <div class="item2">
+            <img src="creatips.png" witdth="90" height="90">
+        </div>
+
+
+        <form action="" class="formulariofooter" method="post">
+            Regístrate y entérate de las novedades:
+            <br>
+            <br>
+            <input type="text" name="mail" size="50">
+            <input class= "botonformulario" type="submit" value="Enviar">
+            
+        </form>
+
+        <div class="redessociales">
+            <div class="botón" button type="submit">blog</div>
+            
+        
+           
+    
+    </div>
+    
+    </body>
+
+</html>
